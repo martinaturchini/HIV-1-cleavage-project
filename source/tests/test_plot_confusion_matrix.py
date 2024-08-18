@@ -19,11 +19,6 @@ def test_plot_confusion_matrix():
     assert os.path.exists(file_path), f"File {file_path} was not created."
     print(f"File {file_path} created successfully!")
 
-    # Optionally: Add image comparison here if needed
-
     # Clean up: Remove the file after verification
     os.remove(file_path)
     print(f"File {file_path} has been removed after the test.")
-
-# Run the test
-test_plot_confusion_matrix()
