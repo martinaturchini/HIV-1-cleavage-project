@@ -1,5 +1,3 @@
-# tests/test_separate.py
-
 import unittest
 import numpy as np
 from separate import separate
