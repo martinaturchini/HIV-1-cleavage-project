@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import confusion_matrix
+from itertools import product
 
 def plot_confusion_matrix(cm, classes, method,
                           normalize=False,
