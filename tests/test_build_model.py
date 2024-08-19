@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 import tensorflow as tf
-from build_model import build_model
+from source.build_model import build_model
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, InputLayer
 from tensorflow.keras.optimizers import Adam
