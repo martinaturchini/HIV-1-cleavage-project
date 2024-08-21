@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.metrics import ConfusionMatrixDisplay, roc_curve, auc
+from source.separate import separate
 
 def evaluate(x_test, Y_test, model, mod_num):
 
