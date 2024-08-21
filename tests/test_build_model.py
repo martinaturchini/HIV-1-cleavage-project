@@ -1,5 +1,7 @@
 import unittest
+from tensorflow import keras
 from tensorflow.keras import Model
+from keras.optimizers import Adam
 from source.build_model import build_model
 
 class TestBuildModel(unittest.TestCase):
