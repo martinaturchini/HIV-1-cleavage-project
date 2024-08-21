@@ -1,5 +1,6 @@
 import unittest
 from tensorflow.keras import Model
+from source.build_model import build_model
 
 class TestBuildModel(unittest.TestCase):
 
