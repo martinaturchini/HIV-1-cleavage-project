@@ -35,7 +35,7 @@ class TestPlotMetrics(unittest.TestCase):
         file_name = 'Test_Loss_Plot.png'
 
         # Call the function with test data
-        file_path = plot_metrics(self.df_results, metric_name, y_label, file_dir, file_name)
+        file_path = plot_metrics(self.df_results, metric_name, y_label, file_name)
 
         # Verify that the plot was saved
         self.assertTrue(os.path.exists(file_path), f"File {file_path} was not created.")
