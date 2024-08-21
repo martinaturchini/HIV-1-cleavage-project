@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_metrics(df_results, metric_name, y_label, file_name):
+def plot_metrics(df_results, metric_name, y_label, file_dir, file_name):
     # Initialize the plot
     plt.figure()
 
