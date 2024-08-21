@@ -3,6 +3,7 @@ from tensorflow import keras
 from keras.models import Sequential
 from keras.optimizers import Optimizer, Adam
 from keras.layers import Dense, InputLayer, Dropout
+from keras.regularizers import l2
 
 def build_model(input_shape, params, best_params):
     """
