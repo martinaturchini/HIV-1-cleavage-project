@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_history(network_history, mod_num):
+def plot_history(network_history, mod_num, file_dir):
  """
     Plotting loss and accuracy values obtained for each epoch.
  """
