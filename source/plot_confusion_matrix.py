@@ -28,6 +28,6 @@ def plot_confusion_matrix(cm, classes, method,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
 
-    plt.savefig(f"{file_dir}//HIV-CP Plots/Confusion matrix "+
+    plt.savefig(f"{file_dir}/Confusion matrix "+
                 method + mod_num + ".png")
     plt.show()
