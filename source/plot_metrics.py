@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_metrics(df_results, metric_name, y_label, file_dir, file_name):
+def plot_metrics(df_results, metric_name, y_label, file_name):
     # Initialize the plot
     plt.figure()
 
@@ -19,5 +19,5 @@ def plot_metrics(df_results, metric_name, y_label, file_dir, file_name):
     plt.xticks(np.arange(0, 32, step=5))
     plt.ylabel(y_label)
     plt.legend(frameon=False)
-    plt.savefig(f"{file_dir}/{file_name}")
+    plt.savefig(f"{file_dir}//HIV-CP Plots/{file_name}")
     plt.show()
