@@ -6,7 +6,7 @@ from itertools import product
 def plot_confusion_matrix(cm, classes, method,
                           normalize=False,
                           title='Confusion matrix ',
-                          cmap=plt.cm.Blues, mod_num=""):
+                          cmap=plt.cm.Blues, mod_num="", file_dir):
     """
     This function prints and plots the confusion matrix.
     Normalization can be applied by setting `normalize=True`.
