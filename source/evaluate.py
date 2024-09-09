@@ -4,7 +4,7 @@ from sklearn.metrics import ConfusionMatrixDisplay, roc_curve, auc
 from separate import separate
 from plot_confusion_matrix import plot_confusion_matrix
 
-def evaluate(x_test, Y_test, model, mod_num):
+def evaluate(x_test, Y_test, model, mod_num, file_dir):
 
     """
     This function evaluate loss and metric, computes the confusion matrix,
@@ -47,7 +47,7 @@ def evaluate(x_test, Y_test, model, mod_num):
           (accuracy+sensitivity+specificity+auc(fpr,tpr)+f1)/5)
 
     # Plot the confusion matrix
-    plot_confusion_matrix(confusion_mtx, classes = (0,1), method="MLP ",
+    plot_confusion_matrix(file_dir, confusion_mtx, classes = (0,1), method="MLP ",
                           mod_num=mod_num)
 
     # Display the normalized confusion matrix
