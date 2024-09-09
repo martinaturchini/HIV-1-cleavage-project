@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.metrics import confusion_matrix
 from itertools import product
 
-def plot_confusion_matrix(cm, classes, method, file_dir
+def plot_confusion_matrix(file_dir, cm, classes, method,
                           normalize=False,
                           title='Confusion matrix ',
                           cmap=plt.cm.Blues, mod_num=""):
