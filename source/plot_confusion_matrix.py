@@ -3,10 +3,10 @@ import numpy as np
 from sklearn.metrics import confusion_matrix
 from itertools import product
 
-def plot_confusion_matrix(cm, classes, method,
+def plot_confusion_matrix(cm, classes, method, file_dir
                           normalize=False,
                           title='Confusion matrix ',
-                          cmap=plt.cm.Blues, mod_num="", file_dir):
+                          cmap=plt.cm.Blues, mod_num=""):
     """
     This function prints and plots the confusion matrix.
     Normalization can be applied by setting `normalize=True`.
