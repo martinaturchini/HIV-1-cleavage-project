@@ -1,25 +1,26 @@
 # HIV-1-cleavage-prediction
-Supervised Machine Learning project for HIV-1 cleavege sites. This project compares the results obtained with three different classifiers: Multi-Layer Perceptron, Logistic Regression and k-NN.
+This project applies supervised machine learning to predict HIV-1 cleavage sites. It compares the performance of three classifiers: Multi-Layer Perceptron (MLP), Logistic Regression, and k-Nearest Neighbors (k-NN).
 
 # Description
-This work shows the possibility to study and predict the HIV-1 cleavage sites given the combination of sequence information, including amino acid binary profiles, bond composition, and physicochemical properties. The best performances are obtained via the Multi-Layer Perceptron classifier and similar results can be obtained with the Logistic Regression classifier. The k-NN classifier is the worst among the methods analyzed in this work. The results could be improved by using a larger data set, that can be implemented via data augmentation techniques.
+The goal of this project is to study and predict HIV-1 cleavage sites using sequence information, including amino acid binary profiles, bond composition, and physicochemical properties. The Multi-Layer Perceptron (MLP) classifier achieves the best performance, while Logistic Regression produces similar results. The k-NN classifier shows the lowest accuracy among the models analyzed. Future improvements could be made by utilizing a larger dataset or applying data augmentation techniques.
 
 # Usage
-To use this project in a Jupyter Notebook, you need to download and save the dataset from [this link](https://github.com/martinaturchini/HIV-1-cleavege-/blob/main/12859_2022_5017_MOESM2_ESM.xlsx) into the following location:
+To use this project in a Jupyter Notebook, download and save the dataset from [this link](https://github.com/martinaturchini/HIV-1-cleavege-/blob/main/12859_2022_5017_MOESM2_ESM.xlsx) into the following location:
 ```bash
 /content/gdrive/My Drive
 ```
 
-# Run the tests
-You can clone the project repository using the following command:
+# Runnig the tests
+To test the functionality of the project, follow these steps:
+1. Clone the project repository:
 ```bash
 git clone https://github.com/martinaturchini/HIV-1-cleavage-project.git
 ```
-After cloning, navigate into the project directory:
+2. Navigate into the project directory:
 ```bash
 cd HIV-1-cleavage-project/
 ```
-To run all the tests, use this command:
+3. Run all the tests:
 ```bash
 python3 -m unittest discover -s tests
 ```
