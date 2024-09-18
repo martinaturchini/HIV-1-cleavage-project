@@ -6,9 +6,6 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.regularizers import l2
 from source.build_model import build_model
 
-# Assuming build_model is defined in another file and imported here
-# from your_module import build_model
-
 class TestBuildModel(unittest.TestCase):
 
     def setUp(self):
