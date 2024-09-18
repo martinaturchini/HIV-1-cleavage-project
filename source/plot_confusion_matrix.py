@@ -12,7 +12,7 @@ def plot_confusion_matrix(file_dir, cm, classes, method,
     Normalization can be applied by setting `normalize=True`.
     """
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
-    plt.title(title + method + mod_num)
+    plt.title(title + method + str(mod_num))
     plt.colorbar()
     tick_marks = np.arange(len(classes))
     plt.xticks(tick_marks, classes, rotation=45)
