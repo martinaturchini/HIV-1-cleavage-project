@@ -8,7 +8,7 @@ This work shows the possibility to study and predict the HIV-1 cleavage sites gi
 To work with the code on Jupyter Notebook is necessary to download and save the data set (https://github.com/martinaturchini/HIV-1-cleavege-/blob/main/12859_2022_5017_MOESM2_ESM.xlsx) in "/content/gdrive/My Drive".
 
 For the testing you can download the project directory with: git clone https://github.com/martinaturchini/HIV-1-cleavage-project.git.
-Then, moving in the "HIV-1-cleavage-project/" directory,you can test all the functions at once with: python3 -m unittest discover -s tests
+Then, moving in the "HIV-1-cleavage-project/" directory, you can test all the functions at once with: python3 -m unittest discover -s tests
 
 # Reference
 E. Onah, P. F. Uzor, I. C. Ugwoke, et al., “Prediction of HIV-1 protease cleavage site from octapeptide sequence information using selected classifiers and hybrid descriptors”, BMC Bioinformatics 23, 10.1186/s12859-022-05017-x (2022).
