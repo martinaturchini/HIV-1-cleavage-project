@@ -1,35 +1,33 @@
-import unittest
-import matplotlib.pyplot as plt
 import numpy as np
 import os
-from source.plot_confusion_matrix import plot_confusion_matrix 
+import shutil
+from source.plot_confusion_matrix import plot_confusion_matrix
 
-class TestPlotConfusionMatrix(unittest.TestCase):
+def test_plot_confusion_matrix():
+    # Create a sample confusion matrix
+    cm = np.array([[50, 2, 1],
+                   [10, 30, 5],
+                   [2, 1, 35]])
 
-    def setUp(self):
-        # Initialize test data and directory for saving files
-        self.cm = np.array([[10, 2, 1],
-                            [3, 7, 0],
-                            [1, 2, 8]])
-        self.classes = ['Class A', 'Class B', 'Class C']
-        self.method = 'TestMethod'
-        self.mod_num = '1'
-        self.file_name = 'Test_Confusion_Matrix.png'
-        self.file_path = os.path.join(os.getcwd(), self.file_name)  # Path to save plot
+    # Define class names
+    classes = ['Class A', 'Class B', 'Class C']
 
-    def tearDown(self):
-        # Clean up any files created during the test
-        if os.path.exists(self.file_path):
-            os.remove(self.file_path)
+    # Define method name
+    method = 'Test Method'
 
-    def test_plot_confusion_matrix(self):
-        # Call the function with test data
-        file_path = plot_confusion_matrix(self.cm, self.classes, self.method, normalize=False, title='Test Confusion Matrix', mod_num=self.mod_num)
+    # Set the directory for saving the file
+    file_dir = "test_output"
+    if not os.path.exists(file_dir):
+        os.makedirs(f"{file_dir}//HIV-CP Plots")
+    
+    # Call the function
+    plot_confusion_matrix(file_dir=file_dir, cm=cm, classes=classes, method=method)
 
-        # Verify that the plot was saved
-        self.assertTrue(os.path.exists(file_path), f"File {file_path} was not created.")
-        print(f"File {file_path} created successfully!")
+    # Check if the file was created
+    file_path = f"{file_dir}//HIV-CP Plots/Confusion matrix {method}.png"
+    assert os.path.exists(file_path), "Confusion matrix plot file was not created."
 
-if __name__ == '__main__':
-    unittest.main()
+    print(f"Test passed: Confusion matrix plot saved at {file_path}")
 
+    # Clean up
+    shutil.rmtree(file_dir)
