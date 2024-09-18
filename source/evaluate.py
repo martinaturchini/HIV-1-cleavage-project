@@ -23,8 +23,10 @@ def evaluate(x_test, Y_test, model, mod_num, file_dir):
     Y_cls = separate(Y_pred)
 
     # Generate classification report
+    print("Calling classification_report")  # Debug statement to trace the call
     cr = classification_report(Y_test, Y_cls, output_dict=True)
-    print('Classification Report:\n', classification_report(Y_test,Y_cls))
+    print("Classification report generated")  # Debug statement to confirm the call
+    print('Classification Report:\n', cr)
 
     # Compute confusion matrix
     confusion_mtx = confusion_matrix(Y_test, Y_cls)
