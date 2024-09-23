@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve
 
-def compare_roccurves(model3):
+def compare_roccurves(model, X_test, y_test, y_pred_MLP):
   """
   To compare the different results obtained with the 3 methods.
   """
