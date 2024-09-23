@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 def plot_metrics(df_results, metric_name, y_label, file_dir, file_name):
     # Initialize the plot
@@ -19,5 +20,16 @@ def plot_metrics(df_results, metric_name, y_label, file_dir, file_name):
     plt.xticks(np.arange(0, 32, step=5))
     plt.ylabel(y_label)
     plt.legend(frameon=False)
-    plt.savefig(f"{file_dir}//HIV-CP Plots/{file_name}")
+
+    # Construct the file path
+    file_path = os.path.join(file_dir, "HIV-CP Plots", file_name)
+    
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+    # Save the plot
+    plt.savefig(file_path)
     plt.show()
+
+    # Return the file path
+    return file_path
