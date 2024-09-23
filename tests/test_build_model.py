@@ -9,7 +9,6 @@ from source.build_model import build_model
 class TestBuildModel(unittest.TestCase):
 
     def setUp(self):
-        # Common parameters to use in tests
         self.input_shape = (10,)
         self.params = {
             'dense_nodes': [64, 32],
@@ -57,9 +56,7 @@ class TestBuildModel(unittest.TestCase):
         """Test if the model is compiled with the correct optimizer and loss."""
         model = build_model(self.input_shape, self.params, self.best_params)
         self.assertIsInstance(model.optimizer, Adam)
-        #self.assertEqual(model.optimizer.learning_rate.numpy(), self.best_params['learning_rate_init'])
         self.assertEqual(model.loss, 'binary_crossentropy')
-        #self.assertIn('accuracy', model.metrics)
 
 if __name__ == '__main__':
     unittest.main()
