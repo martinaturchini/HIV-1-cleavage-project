@@ -40,14 +40,13 @@ class TestEvaluateFunction(unittest.TestCase):
         mock_classification_report.return_value = {
             'weighted avg': {'f1-score': 0.85}
         }
-        mock_confusion_matrix.return_value = np.array([[1, 0], [0, 1]])  # Example confusion matrix
+        mock_confusion_matrix.return_value = np.array([[1, 0], [0, 1]])  
         mock_auc.return_value = 0.95  # Mock AUC score
         mock_roc_curve.return_value = ([0.0, 0.5, 1.0], [0.0, 0.75, 1.0], None)
 
         file_dir = "test_directory"
         mod_num = 1
-
-        # Call the evaluate function
+                          
         evaluate(x_test, Y_test, model, mod_num, file_dir)
 
         # Check if the model's evaluate and predict functions are called
