@@ -7,7 +7,6 @@ from source.plot_metrics import plot_metrics
 class TestPlotMetrics(unittest.TestCase):
 
     def setUp(self):
-        # Setup any necessary variables or state before each test
         self.history = {
             'train_loss': [0.6, 0.5, 0.4, 0.3, 0.2],
             'val_loss': [0.65, 0.55, 0.45, 0.35, 0.25],
@@ -32,12 +31,10 @@ class TestPlotMetrics(unittest.TestCase):
             shutil.rmtree(self.file_dir)
 
     def test_plot_metrics(self):
-        # Define test parameters
         metric_name = 'loss'
         y_label = 'Loss'
         file_name = 'Test_Loss_Plot.png'
 
-        # Call the function with test data
         file_path = plot_metrics(self.df_results, metric_name, y_label, self.file_dir, file_name)
         
         # Debugging print statements to check the path
